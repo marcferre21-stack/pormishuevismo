@@ -1,20 +1,24 @@
-/**
+﻿/**
  * Use this file to import partials.
  * Do not include SCSS code in this file.
+ * Order follows ITCSS: from low to high specificity.
  */
 
-/**
- * Import dependencies
- */
+// Dependencies
 @use "dependencies";
 
-/**
- * Import layouts
- * It's a best practice to use a different partial for each page
- */
+// 2. Tools (functions, no CSS output)
+@use "tools/functions";
 
+// 3. Generic
+@use "generic/reset";
+
+// 4. Elements
+@use "elements/elements";
+
+// Layouts (page)
 @use "layouts/home";
 
-/**
- * Do NOT include anything else in this file!
- */
+// 6. Components
+@use "components/rotonda";
+@use "components/peu";

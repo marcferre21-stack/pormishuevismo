@@ -1,0 +1,73 @@
+﻿@use "../variables";
+@use "../tools/functions" as fn;
+
+// Component BEM: bloc "rotonda" amb els elements anell, illa, autor, titol i lema.
+.rotonda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: fn.spacing(3) fn.spacing(2);
+
+  &__anell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: fn.rem(520);
+    aspect-ratio: 1;
+    background-color: variables.$color-asphalt;
+    border-radius: 50%;
+    box-shadow: 0 fn.spacing(1) fn.spacing(3) rgba(0, 0, 0, 0.25);
+
+    // Línia discontínua de senyalització de la calçada.
+    &::before {
+      position: absolute;
+      inset: 7%;
+      content: "";
+      border: fn.rem(4) dashed variables.$color-line;
+      border-radius: 50%;
+    }
+  }
+
+  &__illa {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: fn.spacing(1);
+    align-items: center;
+    justify-content: center;
+    width: 68%;
+    aspect-ratio: 1;
+    padding: fn.spacing(3);
+    color: variables.$color-paper;
+    text-align: center;
+    background-color: variables.$color-island;
+    border: fn.rem(6) solid variables.$color-line;
+    border-radius: 50%;
+  }
+
+  &__autor {
+    padding: fn.spacing(0.5) fn.spacing(1.5);
+    margin: 0;
+    font-size: fn.rem(12);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background-color: variables.$color-sign;
+    border-radius: fn.rem(999);
+  }
+
+  &__titol {
+    margin: 0;
+    font-size: clamp(1.1rem, 5vw, 2.25rem);
+  }
+
+  &__lema {
+    margin: 0;
+    font-size: clamp(0.75rem, 2.8vw, 1rem);
+    line-height: 1.4;
+    text-wrap: balance;
+  }
+}
+

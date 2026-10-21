@@ -1,0 +1,11 @@
+@use "sass:math";
+
+// Converteix píxels a rem (base 16px per defecte).
+@function rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}
+
+// Escala d'espaiat basada en múltiples de 8px.
+@function spacing($step) {
+  @return rem($step * 8);
+}

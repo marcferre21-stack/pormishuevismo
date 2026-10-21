@@ -1,0 +1,15 @@
+﻿@use "../variables";
+@use "../tools/functions" as fn;
+
+.peu {
+  padding: fn.spacing(2);
+  margin-top: auto;
+  color: variables.$color-paper;
+  text-align: center;
+  background-color: variables.$color-asphalt;
+
+  &__text {
+    margin: 0;
+    font-size: fn.rem(12);
+  }
+}
