@@ -1,0 +1,23 @@
+﻿@use "../variables";
+@use "../tools/functions" as fn;
+
+// Component BEM: bloc "targeta" amb els elements icona i titol.
+.targeta {
+  padding: fn.spacing(3) fn.spacing(2);
+  color: variables.$color-paper;
+  text-align: center;
+  background-color: variables.$color-asphalt;
+  border-top: fn.rem(6) solid variables.$color-sign;
+  border-radius: fn.rem(12);
+
+  &__icona {
+    margin-bottom: fn.spacing(1);
+    font-size: fn.rem(32);
+    color: variables.$color-line;
+  }
+
+  &__titol {
+    margin: 0;
+    font-size: fn.rem(18);
+  }
+}

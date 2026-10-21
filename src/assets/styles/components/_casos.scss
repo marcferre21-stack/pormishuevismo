@@ -1,0 +1,19 @@
+﻿@use "../variables";
+@use "../tools/functions" as fn;
+
+// Component BEM: bloc "casos" (llista de targetes en graella).
+.casos {
+  display: grid;
+  gap: fn.spacing(2);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @media (min-width: variables.$mq-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: variables.$mq-desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
