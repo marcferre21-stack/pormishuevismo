@@ -1,0 +1,21 @@
+﻿@use "../variables";
+@use "../tools/functions" as fn;
+
+// Component BEM: bloc "seccio" amb els elements titol i text.
+.seccio {
+  max-width: fn.rem(720);
+  padding: fn.spacing(4) fn.spacing(2);
+  margin: 0 auto;
+
+  &__titol {
+    padding-bottom: fn.spacing(1);
+    margin: 0 0 fn.spacing(2);
+    font-size: fn.rem(28);
+    color: variables.$color-island;
+    border-bottom: fn.rem(4) dashed variables.$color-line;
+  }
+
+  &__text {
+    margin: 0 0 fn.spacing(2);
+  }
+}
