@@ -1,0 +1,27 @@
+﻿@use "../variables";
+@use "../tools/functions" as fn;
+
+// Component BEM: bloc "coberta" amb els elements imatge i peu.
+.coberta {
+  max-width: fn.rem(220);
+  margin: 0 auto fn.spacing(3);
+
+  @media (min-width: variables.$mq-tablet) {
+    max-width: fn.rem(260);
+  }
+
+  &__imatge {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: fn.rem(8);
+    box-shadow: 0 fn.spacing(1) fn.spacing(2) rgba(0, 0, 0, 0.3);
+  }
+
+  &__peu {
+    margin-top: fn.spacing(1);
+    font-size: fn.rem(12);
+    color: variables.$color-asphalt;
+    text-align: center;
+  }
+}
