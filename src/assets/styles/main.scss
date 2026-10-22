@@ -7,8 +7,9 @@
 // Dependencies
 @use "dependencies";
 
-// 2. Tools (functions, no CSS output)
+// 2. Tools (functions and mixins, no CSS output)
 @use "tools/functions";
+@use "tools/mixins";
 
 // 3. Generic
 @use "generic/reset";
@@ -26,3 +27,5 @@
 @use "components/casos";
 @use "components/targeta";
 @use "components/coberta";
+@use "components/fitxa";
+@use "components/cinta";

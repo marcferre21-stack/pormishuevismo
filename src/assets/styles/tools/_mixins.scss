@@ -1,0 +1,10 @@
+﻿// Capa Tools (ITCSS): dibuixa franges diagonals alternades, com una cinta d'obra.
+@mixin stripes($color-a, $color-b, $size) {
+  background-image: repeating-linear-gradient(
+    45deg,
+    $color-a 0,
+    $color-a $size,
+    $color-b $size,
+    $color-b ($size * 2)
+  );
+}

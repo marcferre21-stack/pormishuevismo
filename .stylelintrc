@@ -1,4 +1,4 @@
-{
+﻿{
   "extends": [
     "stylelint-config-recommended-scss",
     "stylelint-config-recess-order"
@@ -10,9 +10,26 @@
       { "message": "Les classes han de seguir la nomenclatura BEM (bloc__element--modificador)." }
     ],
     "selector-max-id": 0,
+    "selector-max-specificity": "0,3,0",
+    "selector-max-compound-selectors": 3,
+    "selector-no-qualifying-type": true,
     "declaration-no-important": true,
     "max-nesting-depth": 3,
-    "selector-max-compound-selectors": 3,
-    "color-hex-length": "short"
+    "color-hex-length": "short",
+    "color-named": "never",
+    "font-weight-notation": "numeric",
+    "property-no-vendor-prefix": true,
+    "value-no-vendor-prefix": true,
+    "unit-allowed-list": ["px", "rem", "em", "%", "vw", "vh", "fr", "deg"],
+    "scss/dollar-variable-pattern": [
+      "^[a-z][a-z0-9-]*$",
+      { "message": "Les variables han d'estar en kebab-case (per exemple, $color-line)." }
+    ],
+    "scss/at-function-pattern": "^[a-z][a-z0-9-]*$",
+    "scss/at-mixin-pattern": "^[a-z][a-z0-9-]*$",
+    "scss/comment-no-empty": true,
+    "scss/at-use-no-unnamespaced": true,
+    "scss/no-duplicate-dollar-variables": true
   }
 }
+

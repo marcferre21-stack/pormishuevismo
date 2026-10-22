@@ -1,6 +1,14 @@
-﻿// Layout de la pàgina: columna a tota l'alçada perquè el peu quedi sempre al final.
+﻿@use "sass:color";
+@use "../variables";
+@use "../tools/functions" as fn;
+
+// Layout de la pàgina: columna a tota l'alçada, amb fons de plànol d'arquitecte.
 .pagina {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image:
+    linear-gradient(color.change(variables.$color-island, $alpha: 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, color.change(variables.$color-island, $alpha: 0.12) 1px, transparent 1px);
+  background-size: fn.rem(32) fn.rem(32);
 }

@@ -1,0 +1,28 @@
+﻿@use "../variables";
+@use "../tools/functions" as fn;
+@use "../tools/mixins" as mx;
+
+// Component BEM: bloc "cinta" (cinta d'obra lateral) amb els modificadors esquerra i dreta.
+.cinta {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: none;
+  width: fn.rem(96);
+
+  @include mx.stripes(variables.$color-line, variables.$color-ink, fn.rem(24));
+
+  @media (min-width: variables.$mq-wide) {
+    display: block;
+  }
+
+  &--esquerra {
+    left: 0;
+    border-right: fn.rem(6) solid variables.$color-ink;
+  }
+
+  &--dreta {
+    right: 0;
+    border-left: fn.rem(6) solid variables.$color-ink;
+  }
+}
